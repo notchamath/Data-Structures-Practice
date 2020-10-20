@@ -1,4 +1,4 @@
-//this program takes 2 sorted arrays of integers and merges them
+//this program takes 2 sorted arrays of integers and merges them, Time Complexity is O(n)
 
 function merge(mergedArr, arr1, arr2) {
 
