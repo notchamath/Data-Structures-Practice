@@ -1,7 +1,9 @@
 //this program takes 2 sorted arrays of integers and merges them, Time Complexity is O(n)
 
 function merge(mergedArr, arr1, arr2) {
-
+ 
+    //declare variables
+    
     let i = 0,
         j = 0;
     let arr1Item = arr1[j],
@@ -25,6 +27,7 @@ function merge(mergedArr, arr1, arr2) {
 }
 
 function mergeSortedArrays(arr1, arr2) {
+
     //check if inputs are valid
     if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
         return 'The inputs are not arrays';
@@ -40,6 +43,7 @@ function mergeSortedArrays(arr1, arr2) {
 
     const mergedArr = [];
 
+    //call function to merge the 2 arrays
     merge(mergedArr, arr1, arr2);
 
     return mergedArr;
