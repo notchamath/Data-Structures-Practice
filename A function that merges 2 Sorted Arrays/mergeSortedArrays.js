@@ -9,6 +9,7 @@ function merge(mergedArr, arr1, arr2) {
     let arr1Item = arr1[j],
         arr2Item = arr2[i];
 
+    //checks which numbers are lower and adds them, making final array also sorted
     while (arr1Item || arr2Item) {
         if (arr1Item > arr2Item || arr1Item === undefined) {
 
