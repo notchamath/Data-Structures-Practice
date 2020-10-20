@@ -1,3 +1,7 @@
+//this program creates an array from scratch as a Class on JS
+//arrays are good for accessing items using indexes, push and pop
+//bad for inserts and deletes
+
 class MyArray {
     constructor(){
       this.length = 0;
