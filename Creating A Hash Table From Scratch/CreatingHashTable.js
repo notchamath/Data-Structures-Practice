@@ -1,6 +1,6 @@
 //creating a hash table from scratch
 //hash tables are good/fast in terms of searches/lookups, inserts and deletes
-//might be bad for space complexity and key iteration may be slow
+//might be bad for space complexity and key iteration may be slow. Also unordered in memory.
 class HashTable{
 
     //constructor
