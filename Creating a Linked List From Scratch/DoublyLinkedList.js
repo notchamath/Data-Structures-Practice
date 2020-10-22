@@ -1,3 +1,9 @@
+//Creating a Doubly Linked List from scratch
+//Linked Lists overall are good for organized data storing(ordered) and can store a flexible amount of data
+//Doubly Linked Lists are better for searches since they can traverse both ways, and are overall safer than singly LLs
+//Linked lists overall are not ideal for searches(slow lookups) and requires more memory
+
+//creating each node in a class to keep the code DRY
 class Node{
     constructor(value){
       this.value = value;
@@ -6,13 +12,17 @@ class Node{
     }
   }
   
+  //establishing the doubly linked list
   class DoublyLinkedList{
+
+    //constructor
     constructor(value){
       this.head = new Node(value);
       this.tail = this.head;
       this.length = 1;
     }
   
+    //print all values stored in the linked list
     printValues(){
       const array = [];
       let currNode = this.head;
@@ -25,6 +35,7 @@ class Node{
       return array;
     }
   
+    //should be a private method, not for user
     _traverseToIndex(index){
    
       let counter = 0;
@@ -37,7 +48,8 @@ class Node{
   
       return currNode;
     }
-  
+
+    //add a node to the tail    
     append(value){
       const newNode = new Node(value);
       this.tail.next = newNode;
@@ -47,7 +59,8 @@ class Node{
   
       return this.printValues();
     }
-  
+
+    //add a node to head
     prepend(value){
       const newNode = new Node(value);
       newNode.next = this.head;
@@ -58,6 +71,7 @@ class Node{
       return this.printValues();
     }
   
+    //add a node at a specified index
     insert(index, value){
   
       if(index >= this.length) {
@@ -80,6 +94,7 @@ class Node{
       return this.printValues();
     }
   
+    //delete node with the specified index
     remove(index){
       //JS has garbage collection built in, therefore:
       
