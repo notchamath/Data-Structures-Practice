@@ -95,6 +95,30 @@ class Node{
   
       return this.printValues();
     }
+
+    reverseLinkedList(){
+
+      //if head is the only node in the list, return head
+      if(!this.head.next){
+        return this.head;
+      }
+  
+      let first = this.head;
+      let second = first.next;
+      this.tail = this.head;
+    
+      while(second){
+        let temp = second.next;
+        second.next = first;
+        first = second;
+        second = temp;
+      }
+    
+      this.head.next = null;
+      this.head = first;
+    
+      return this.printValues();
+    }
   }
   
   let newLinkedList = new LinkedList(2);
@@ -104,4 +128,5 @@ class Node{
   newLinkedList.prepend(99);
   newLinkedList.insert(100,1);
   newLinkedList.remove(0,1);
+  newLinkedList.reverseLinkedList();
   
