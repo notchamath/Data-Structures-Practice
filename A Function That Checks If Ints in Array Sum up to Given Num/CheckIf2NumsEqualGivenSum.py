@@ -16,4 +16,5 @@ def check_for_sum(array, sum):
 
 
 check_for_sum([3, 4, 1, 2, 8], 6)
-check_for_sum([2, 4, 1, 4, 8], 8)
+check_for_sum([2, 4, 1, 4, 7], 7)
+check_for_sum([2, 1, 4, 4, 8], 8)
