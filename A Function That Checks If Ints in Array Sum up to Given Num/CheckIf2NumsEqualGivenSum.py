@@ -1,3 +1,6 @@
+# This function checks an array of ints to see if two elements in the could sum up to a given number
+# The Time Complexity of this function is O(n)
+
 def check_for_sum(array, sum):
 
     dict = {}
@@ -13,3 +16,4 @@ def check_for_sum(array, sum):
 
 
 check_for_sum([3, 4, 1, 2, 8], 6)
+check_for_sum([2, 4, 1, 4, 8], 8)
