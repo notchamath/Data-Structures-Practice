@@ -1,4 +1,4 @@
-# This function checks an array of ints to see if two elements in the could sum up to a given number
+# This function checks an array of ints to see if two elements in the array could sum up to a given number
 # The Time Complexity of this function is O(n)
 
 def check_for_sum(array, sum):
