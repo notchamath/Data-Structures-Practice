@@ -1,5 +1,5 @@
 # This function checks an array of ints to see if two elements in the array could sum up to a given number
-# The Time Complexity of this function is O(n)
+# The Time Complexity of this function is O(n), barring any hash collisions. 'in' operator is O(1) for Hash Tables per Python Docs.
 
 def check_for_sum(array, sum):
 
