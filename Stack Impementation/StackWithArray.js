@@ -1,5 +1,5 @@
 //creating a Stack using a Linked List
-//Stacks are good for fast inserts and fast removes and quick peeks. They are also ordered.
+//Stacks are good for fast inserts, fast removes and quick peeks (Although with limited access). They are also ordered.
 //Cant use for searches
 
 //create Stack class
