@@ -1,0 +1,85 @@
+//creating a Queue using a Linked List
+//Queues are good for fast inserts and fast removes and quick peeks. They are also ordered.
+//Cant use for searches
+
+//create Node class
+class Node{
+    constructor(value){
+      this.value = value;
+      this.next = null;
+    }
+  }
+  
+  //create Queue class
+  class Queue{
+    constructor(){
+      this.first = null;
+      this.last = null;
+      this.length = 0;
+    }
+
+    //returns the item thats gonna be dequeued
+    peek(){
+      return this.first;
+    }
+
+    //adds item to the last spot
+    enqueue(value){
+    const newNode = new Node(value);
+
+    if(this.first === null){
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      this.last.next = newNode;
+      this.last = newNode;
+    }
+  
+    this.length++;
+    return this;
+    }
+  
+    //removes item from first spot
+    dequeue(){
+      if(!this.first){
+        return null;
+      }
+  
+      const popNode = this.first.value;
+  
+      if(this.first === this.last){
+        this.first = null;
+        this.last = null;
+      } else {
+        this.first = this.first.next;
+      }
+  
+      this.length--;
+      return popNode;
+    }
+  
+    //checks if queue is empty
+    isEmpty(){
+      if (!this.first){
+        return true;
+      }
+  
+      return false;
+    }
+  
+  }
+  
+  let myQueue = new Queue();
+  
+  myQueue.peek();
+  myQueue.isEmpty();
+  myQueue.enqueue('Google');
+  myQueue.enqueue('youtube');
+  myQueue.enqueue('twitter');
+  myQueue.peek();
+  myQueue.isEmpty();
+  myQueue.dequeue();
+  myQueue.dequeue();
+  myQueue.dequeue();
+  myQueue.peek();
+  myQueue.isEmpty();
