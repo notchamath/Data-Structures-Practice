@@ -1,6 +1,6 @@
 //creating a Queue using a Linked List
-//Queues are good for fast inserts and fast removes and quick peeks. They are also ordered.
-//Cant use for searches
+//Queues are good for fast inserts, fast removes and quick peeks (Although with limited access). They are also ordered.
+//Not good for searches
 
 //create Node class
 class Node{
