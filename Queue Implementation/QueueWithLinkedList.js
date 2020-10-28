@@ -18,12 +18,12 @@ class Node{
       this.length = 0;
     }
 
-    //returns the item thats gonna be dequeued
+    //returns the item thats gonna be dequeued. Time Complexity = O(1)
     peek(){
       return this.first;
     }
 
-    //adds item to the last spot
+    //adds item to the last spot. Time Complexity = O(1)
     enqueue(value){
     const newNode = new Node(value);
 
@@ -39,7 +39,7 @@ class Node{
     return this;
     }
   
-    //removes item from first spot
+    //removes item from first spot. Time Complexity = O(1)
     dequeue(){
       if(!this.first){
         return null;
@@ -58,7 +58,7 @@ class Node{
       return popNode;
     }
   
-    //checks if queue is empty
+    //checks if queue is empty. Time Complexity = O(1)
     isEmpty(){
       if (!this.first){
         return true;

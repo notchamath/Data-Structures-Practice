@@ -1,5 +1,5 @@
 //Implementing a Queue using two Stacks
-//Here peek, enqueue will have an O(1) while dequeue will have an O(n) because of 2 seperate loops
+//Here peek, enqueue will have an Time Complexity of O(1) while dequeue will have an O(n) because of 2 seperate loops
 
 //create Queue class
 class QueueOfStacks{
