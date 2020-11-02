@@ -1,3 +1,5 @@
+//BST are good for lookups, inserts, and deletes with a O(log n) for all of the above functions
+
 //create Node class
 class Node{
   constructor(value){
@@ -104,66 +106,75 @@ class BST{
       } else if(value > currentNode.value) {
           prevNode = currentNode;
           currentNode = currentNode.right;
-
+        
+        //if value current node is the one to be deleted
       } else {
-        //no left or right
-        if(!currentNode.left && !currentNode.right) {
 
-          if(!prevNode){
-            this.root = null;
-            return this;
-          } else if(prevNode.left.value === value) {
-            prevNode.left = null;
-            return this;
-          }
-          prevNode.right = null;
-          return this;
-
-          //no right
-        } else if(currentNode.left && !currentNode.right) {
+        //no right
+        if(!currentNode.right){
 
           if(!prevNode){
             this.root = currentNode.left;
-            return this;
-          } else if (prevNode.left.value === value) {
-            prevNode.left = currentNode.left;
-            return this;
-          }
-          prevNode.right = currentNode.left;
-          return this;
 
-          //no left
-        } else if(!currentNode.left && currentNode.right) {
+          } else {
+
+            if(currentNode.value < prevNode.value){
+              prevNode.left = currentNode.left;
+            } else if(currentNode.value > prevNode.value){
+              prevNode.right = currentNode.left;
+            }
+
+          }
+
+          //right child with no left child
+        } else if(!currentNode.right.left){
+
+          currentNode.right.left = currentNode.left;
 
           if(!prevNode){
             this.root = currentNode.right;
-            return this;
-          } else if(prevNode.left.value == value){
-            prevNode.left = currentNode.right;
-            return this;
-          }
-          prevNode.right = currentNode.right;
-          return this;
 
-          //has both left and right
-        } else {
-          let replacementNode = currentNode.right;
-          if(!prevNode){
-            if(!replacementNode.left){
+          } else {
 
-              replacementNode.left = currentNode.left;
-              this.root = replacementNode;
-              return this;
+            if(currentNode.value < prevNode.value){
+              prevNode.left = currentNode.right;
 
-            } else if(replacementNode.left) {
-              replacementNode = replacementNode.left;
+            } else if(currentNode.value > prevNode.value){
+              prevNode.right = currentNode.right;
             }
-          } else if (prevNode.left.value == value) {
-            replacementNode.left = currentNode.left;
-            prevNode.left = replacementNode;
           }
-           
+
+          //right child with left child
+        } else {
+
+          let leftMost = currentNode.right.left;
+          let leftMostPrev = currentNode.right;
+
+          while(leftMost.left){
+            leftMostPrev = leftMost;
+            leftMost = leftMost.left;
+          }
+
+          leftMostPrev.left = leftMost.right;
+          leftMost.left = currentNode.left;
+          leftMost.right = currentNode.right;
+
+          if(!prevNode){
+            this.root = leftMost;
+            
+          } else {
+
+            if(currentNode.value < prevNode.value){
+              prevNode.left = leftMost;
+
+            } else if (currentNode.value > prevNode.value){
+              prevNode.right = leftMost;
+            }
+
+          }
+
         }
+        return true;
       }
 
     }
