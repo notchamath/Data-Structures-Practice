@@ -1,4 +1,4 @@
-//Graphs are one of the best ways to represent real relationships but scaling graphs is difficult
+//Graphs are one of the best ways to represent real-world relationships but scaling graphs is difficult
 
 //Graph class
 class Graph{
