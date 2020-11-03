@@ -1,4 +1,4 @@
-//BST are good for lookups, inserts, and deletes with a O(log n) for all of the above functions
+//BST are good for lookups, inserts, and deletes with a time complexity of O(log n) for all of the above functions
 
 //create Node class
 class Node{
@@ -147,6 +147,7 @@ class BST{
           //right child with left child
         } else {
 
+          //find left most child node
           let leftMost = currentNode.right.left;
           let leftMostPrev = currentNode.right;
 
@@ -155,6 +156,7 @@ class BST{
             leftMost = leftMost.left;
           }
 
+          //use left most as the replacement for node to be removed
           leftMostPrev.left = leftMost.right;
           leftMost.left = currentNode.left;
           leftMost.right = currentNode.right;
