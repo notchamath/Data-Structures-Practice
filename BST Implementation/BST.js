@@ -120,6 +120,7 @@ class BST{
 
             if(currentNode.value < prevNode.value){
               prevNode.left = currentNode.left;
+              
             } else if(currentNode.value > prevNode.value){
               prevNode.right = currentNode.left;
             }
