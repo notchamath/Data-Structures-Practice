@@ -4,6 +4,7 @@
 function bubbleSort(arr){
     let length = arr.length;
    
+    //for each element in array, compare the value in front of it, make sure value at i < i+1
     for(let i=0; i<length; i++){
         for(let j=0; j<length; j++){
    
