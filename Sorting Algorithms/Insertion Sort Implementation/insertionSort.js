@@ -6,6 +6,7 @@ function insertionSort(arr){
 
 	const length = arr.length;
 
+	//for each element find where they belong, move it there
 	for(let i=1; i<length; i++){
 
 		//if i is smaller than first element, unshift
@@ -13,7 +14,7 @@ function insertionSort(arr){
 			arr.unshift(arr.splice(i,1)[0]);
 		} else {
 
-			//only checking to the left of current element i, exclude first element
+			//only checking to the left of current element i, exclude first element to skip unnecessary iteration
 			if(arr[i] < arr[i-1]){
 
 				for(let j=1; j<i; j++){

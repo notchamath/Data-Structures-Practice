@@ -5,7 +5,7 @@ function selectionSort(arr) {
     const length = arr.length;
     let min, temp;
   
-    //if a value in array is smaller than the value at i, swap the 2 values 
+    //if a value to the right of the element i, is smaller than the value at i, swap the 2 values 
     for(let i=0; i<length; i++){
   
       min = i;
