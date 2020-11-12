@@ -25,6 +25,6 @@ function selectionSort(arr) {
   }
   
   
-  const nums = [5,2,88,2,45,4,11,0,3,2,36];
+  let nums = [5,2,88,2,45,4,11,0,3,2,36];
   
   selectionSort(nums);
