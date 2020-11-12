@@ -11,6 +11,7 @@ function findFactorial(num){
   
   //using Recursion. Time Complexity: O(n)
   function findFactorialRec(num){
+
     if(num === 1 || num === 0){
       return 1;
     }

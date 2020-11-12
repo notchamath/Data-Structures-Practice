@@ -1,4 +1,5 @@
 //fibonacci sequence using Recursion
+//Time complexity is O(2^n)
 
 function fibonacciSeq(num){
     if(num < 2){
