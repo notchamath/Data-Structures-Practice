@@ -1,4 +1,4 @@
-//creating a fuction that uses Insertion Sort to sort an array
+//creating a function that uses Insertion Sort to sort an array
 //Good for sorting 'nearly sorted' inputs since Insertion Sort could have a best case of O(n) and only searches to the left of a given element.
 //Time Complexity(worst): O(n^2), Space Complexity: O(1)
 
