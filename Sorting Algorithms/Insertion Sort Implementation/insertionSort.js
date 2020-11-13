@@ -14,9 +14,10 @@ function insertionSort(arr){
 			arr.unshift(arr.splice(i,1)[0]);
 		} else {
 
-			//only checking to the left of current element i, exclude first element to skip unnecessary iteration
+			//if i is smaller than element to its left, move it, else, leave it as it is
 			if(arr[i] < arr[i-1]){
-
+				
+				//only checking to the left of current element i, exclude first element to skip unnecessary iteration
 				for(let j=1; j<i; j++){
 
 					//find where it belongs, add to the correct spot
