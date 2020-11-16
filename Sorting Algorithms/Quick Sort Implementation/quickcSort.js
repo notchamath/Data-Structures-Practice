@@ -4,16 +4,20 @@
 //but in most cases Quick Sort will have a time complexity of O(n log n)
 
 
+//run quick sort
 function quickSort(arr){
     return runQuickSort(arr, 0, arr.length-1);
 }
 
 function runQuickSort(arr, left, right){
 
-	let partIndx;								//partition index
+	let partIndx; //partition index
 
+    //if there are atleast 2 items in the array, sort it
 	if(left < right){
-		pivot = right;
+        pivot = right;
+        
+        //finding where to partition the array and sorting it partially, one partition at a time
 		partIndx = partition(arr, pivot, left);
 
 		runQuickSort(arr, left, partIndx-1);
@@ -23,11 +27,14 @@ function runQuickSort(arr, left, right){
 	return arr;
 }
 
+//sorts the array one partition at a time
 function partition(arr, pivot, left){
 	let partIndx = left;
 
 	for(let i=left; i<pivot; i++){
 
+        //if value at i is smaller than the pivot value, make sure i is to the left of partIndx
+        //if value at i is bigger than the pivot value, make sure i is to right of partIndx
 		if(arr[i] < arr[pivot]){
 
 			swap(arr, partIndx, i);
@@ -36,10 +43,12 @@ function partition(arr, pivot, left){
 		}
 	}
 
+    //swap partIndx with pivot(creating new partition)
 	swap(arr, partIndx, pivot);
 	return partIndx;
 }
 
+//swapping 2 values in an array
 function swap(arr, i, j){
 	let value = arr[i];
 	arr[i] = arr[j];
