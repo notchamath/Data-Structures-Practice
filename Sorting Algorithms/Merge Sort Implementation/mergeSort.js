@@ -1,6 +1,6 @@
-//creating a function that sorts an array input using Merge Sort
+//creating a program that sorts an array input using Merge Sort
 //Merge sort has a time complexity of O(nlogn) and a space complexity of O(n)
-//Merge sort uses recursion to sort inputs
+//Merge sort uses recursion to sort inputs and is Stable
 
 function mergeSort(arr){
 
