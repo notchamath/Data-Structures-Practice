@@ -30,12 +30,12 @@ function heapify(arr, length, root){
 		right   = left + 1;
 
 
-	//make sure  parent is bigger than their left child
+	//make sure parent is bigger than their left child, if not, use pointer largest to mark bigger child
 	if(left < length && arr[left] > arr[largest]){
 		largest = left;
 	}
 
-	//make sure  parent is bigger than their right child
+	//make sure  parent is bigger than their right child, if not, use pointer largest to mark bigger child
 	if(right < length && arr[right] > arr[largest]){
 		largest = right;
 	}
