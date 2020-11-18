@@ -1,5 +1,6 @@
 //Breadth First Search is one of the methods used for traversal between Nodes; it is good for finding the shortest path between two nodes
 //This Binary Search Tree will be traversed using BFS
+//BFS might have to use more memory compared to DFS
 
 //create Node class
 class Node{
