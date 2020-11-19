@@ -186,35 +186,25 @@ class Node{
   
     }
   
-    //Breadth First Search
+    //Depth First Search
     //when called, this method will traverse through every node in this tree and return their values in an array 
-    BFS() {
-        
-        
-        let list = [];              //value from each node will be added to the list
-        let queue = [];             //queue records which nodes to travel next
-        let currNode = this.root;
+    DFS() {
+     console.log("In Order: " + this.DFSInOrder(this.root,[]));
+    }
 
-        queue.push(currNode);
+    DFSInOrder(node, list){
 
-        //starting at root, record all children of current node in queue, left to right
-        //record value of current node in list
-        while(queue.length > 0){
+      if(node.left){
+        this.DFSInOrder(node.left, list);
+      }
 
-            currNode = queue.shift();
-            list.push(currNode.value);
+      list.push(node.value);
 
-            if(currNode.left){
-                queue.push(currNode.left);
-            }
+      if(node.right){
+        this.DFSInOrder(node.right, list);
+      }
 
-            if(currNode.right){
-                queue.push(currNode.right);
-            }
-
-        }
-
-        return list;
+      return list;
     }
   }
   
@@ -230,4 +220,4 @@ class Node{
   myBST.add(4);
   
   
-  myBST.BFS();
+  myBST.DFS();
