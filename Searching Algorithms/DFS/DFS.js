@@ -190,6 +190,8 @@ class Node{
     //when called, this method will traverse through every node in this tree and return their values in an array 
     DFS() {
      console.log("In Order: " + this.DFSInOrder(this.root,[]));
+     console.log("Pre Order: " + this.DFSPreOrder(this.root,[]));
+     console.log("Post Order: " + this.DFSPostOrder(this.root,[]));
     }
 
     DFSInOrder(node, list){
@@ -206,6 +208,23 @@ class Node{
 
       return list;
     }
+
+    DFSPreOrder(node, list){
+
+      list.push(node.value);
+
+      if(node.left){
+        this.DFSInOrder(node.left, list);
+      }
+
+      if(node.right){
+        this.DFSInOrder(node.right, list);
+      }
+
+      return list;
+    }
+
+   
   }
   
   let myBST = new BST();

@@ -193,6 +193,7 @@ class Node{
 
     //when called, this method will traverse through every node in this tree recursively and return their values in an array 
     BFSR(queue, list){
+      
       if(queue.length < 1){
         return list;
       }
