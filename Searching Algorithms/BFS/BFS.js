@@ -199,20 +199,24 @@ class Node{
       //starting at root, record all children of current node in queue, left to right
       //record value of current node in list
       while(queue.length > 0){
-
+      
+          //add the value of the node dequeued from the queue to the list
           currNode = queue.shift();
           list.push(currNode.value);
 
+          //check for left child 
           if(currNode.left){
               queue.push(currNode.left);
           }
 
+          //check for right child
           if(currNode.right){
               queue.push(currNode.right);
           }
 
       }
 
+      //return the list
       return list;
     }
   }

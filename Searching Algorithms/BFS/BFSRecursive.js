@@ -194,21 +194,26 @@ class Node{
     //when called, this method will traverse through every node in this tree recursively and return their values in an array 
     BFSR(queue, list){
       
+      //if queue is empty return the list
       if(queue.length < 1){
         return list;
       }
 
+      //add the value of the node dequeued from the queue to the list
       let currentNode = queue.shift();
       list.push(currentNode.value);
 
+      //add left child to queue
       if(currentNode.left){
         queue.push(currentNode.left)
           }
-          
+      
+      //add right child to queue
       if(currentNode.right){
         queue.push(currentNode.right)
       }
 
+      //recursive case
       return this.BFSR(queue, list);
 	  }
   }
