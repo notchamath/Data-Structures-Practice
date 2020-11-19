@@ -189,32 +189,31 @@ class Node{
     //Breadth First Search
     //when called, this method will traverse through every node in this tree and return their values in an array 
     BFS() {
-        
-        
-        let list = [];              //value from each node will be added to the list
-        let queue = [];             //queue records which nodes to travel next
-        let currNode = this.root;
 
-        queue.push(currNode);
+      let list = [];              //value from each node will be added to the list
+      let queue = [];             //queue records which nodes to travel next
+      let currNode = this.root;
 
-        //starting at root, record all children of current node in queue, left to right
-        //record value of current node in list
-        while(queue.length > 0){
+      queue.push(currNode);
 
-            currNode = queue.shift();
-            list.push(currNode.value);
+      //starting at root, record all children of current node in queue, left to right
+      //record value of current node in list
+      while(queue.length > 0){
 
-            if(currNode.left){
-                queue.push(currNode.left);
-            }
+          currNode = queue.shift();
+          list.push(currNode.value);
 
-            if(currNode.right){
-                queue.push(currNode.right);
-            }
+          if(currNode.left){
+              queue.push(currNode.left);
+          }
 
-        }
+          if(currNode.right){
+              queue.push(currNode.right);
+          }
 
-        return list;
+      }
+
+      return list;
     }
   }
   

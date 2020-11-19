@@ -193,23 +193,23 @@ class Node{
 
     //when called, this method will traverse through every node in this tree recursively and return their values in an array 
     BFSR(queue, list){
-		if(queue.length < 1){
-			return list;
-		}
+      if(queue.length < 1){
+        return list;
+      }
 
-		let currentNode = queue.shift();
-		list.push(currentNode.value);
+      let currentNode = queue.shift();
+      list.push(currentNode.value);
 
-		if(currentNode.left){
-			queue.push(currentNode.left)
-        }
-        
-		if(currentNode.right){
-			queue.push(currentNode.right)
-		}
+      if(currentNode.left){
+        queue.push(currentNode.left)
+          }
+          
+      if(currentNode.right){
+        queue.push(currentNode.right)
+      }
 
-		return this.BFSR(queue, list);
-	}
+      return this.BFSR(queue, list);
+	  }
   }
   
   let myBST = new BST();
