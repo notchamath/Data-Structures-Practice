@@ -1,6 +1,6 @@
-//Breadth First Search is one of the methods used for traversal between Nodes; it is good for finding the shortest path between two nodes
-//This Binary Search Tree will be traversed using BFS
-//BFS might have to use more memory compared to DFS
+//Depth First Search is one of the methods used for traversal between Nodes; it is good for finding if a path exists between two nodes
+//This Binary Search Tree will be traversed using DFS
+//DFS usually uses less memory compared to BFS
 
 //create Node class
 class Node{
@@ -187,55 +187,70 @@ class Node{
     }
   
     //Depth First Search
-    //when called, this method will traverse through every node in this tree and return their values in an array 
+    //when called, this method will traverse through every node in this tree, recursively and return their values in an array 
     DFS() {
      console.log("In Order: " + this.DFSInOrder(this.root,[]));
      console.log("Pre Order: " + this.DFSPreOrder(this.root,[]));
      console.log("Post Order: " + this.DFSPostOrder(this.root,[]));
     }
 
+    //traverse the BST using In Order method
     DFSInOrder(node, list){
 
+      //check for left node
       if(node.left){
         this.DFSInOrder(node.left, list);
       }
 
+      //add current node value to list
       list.push(node.value);
 
+      //check for right node
       if(node.right){
         this.DFSInOrder(node.right, list);
       }
 
+      //return list
       return list;
     }
 
+    //traverse the BST using Pre Order method
     DFSPreOrder(node, list){
 
+      //add current node value to list
       list.push(node.value);
 
+      //check for left node
       if(node.left){
-        this.DFSInOrder(node.left, list);
+        this.DFSPreOrder(node.left, list);
       }
 
+      //check for right node
       if(node.right){
-        this.DFSInOrder(node.right, list);
+        this.DFSPreOrder(node.right, list);
       }
 
+      //return list
       return list;
     }
 
+    //traverse the BST in Post Order method
     DFSPostOrder(node, list){
 
+      //check for left node
       if(node.left){
         this.DFSPostOrder(node.left, list);
       }
 
+      //check for right node
       if(node.right){
         this.DFSPostOrder(node.right, list);
       }
 
+      //add current node value to list
       list.push(node.value);
       
+      //return list
       return list;
     }
   }
