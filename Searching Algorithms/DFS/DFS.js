@@ -224,7 +224,20 @@ class Node{
       return list;
     }
 
-   
+    DFSPostOrder(node, list){
+
+      if(node.left){
+        this.DFSPostOrder(node.left, list);
+      }
+
+      if(node.right){
+        this.DFSPostOrder(node.right, list);
+      }
+
+      list.push(node.value);
+      
+      return list;
+    }
   }
   
   let myBST = new BST();
