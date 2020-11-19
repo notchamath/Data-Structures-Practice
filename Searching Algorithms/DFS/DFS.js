@@ -187,7 +187,7 @@ class Node{
     }
   
     //Depth First Search
-    //when called, this method will traverse through every node in this tree, recursively and return their values in an array 
+    //when called, this method will traverse through every node in this tree, recursively, using all 3 methods and print the values out 
     DFS() {
      console.log("In Order: " + this.DFSInOrder(this.root,[]));
      console.log("Pre Order: " + this.DFSPreOrder(this.root,[]));
