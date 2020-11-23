@@ -15,3 +15,10 @@ function climbStairs(n, k){
 
     return cache[n % k];
 }
+
+// n = the target stair
+// k = maximum steps you can take at a time
+
+let n = 1;
+let k = 2;
+climbStairs(n, k);
