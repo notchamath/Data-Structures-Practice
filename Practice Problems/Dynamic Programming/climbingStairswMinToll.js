@@ -12,10 +12,9 @@ function climbStairs(n, k, toll){
 
     //base cases
     cache[0] = 0;
-    cache[1] = toll[1];
 
     //for each step i calculate tolls by using equation which adds the k previous step's tolls to current steps toll
-    for(let i=2; i<=n; i++){
+    for(let i=1; i<=n; i++){
         for(let j=1; j<=k; j++){
             if(i-j >= 0){
                 temp[j-1] = cache[(i-j) % k];
