@@ -31,6 +31,8 @@ function uniquePath(grid){
 			}
 		}
 	}
+
+	//return num of ways to get to (m,n) while avoiding red tiles
 	return dp[m-1][n-1];
 }
 
