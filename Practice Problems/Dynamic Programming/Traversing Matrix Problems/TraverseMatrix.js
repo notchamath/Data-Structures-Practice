@@ -1,6 +1,6 @@
 //Problem: How many ways are there to get to point (i,j) if you started at point (0,0)?
 
-//function takes in the size of the matrix and outputs the num of different ways to get to the final point of (m,n)
+//function takes in the size of the matrix and outputs the num of different ways to get to the final point (m,n)
 function uniquePath(m, n){
 
 	//create multidimentional array of size (m x n)
