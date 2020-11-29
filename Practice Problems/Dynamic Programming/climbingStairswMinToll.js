@@ -13,7 +13,7 @@ function climbStairs(n, k, toll){
     //base cases
     cache[0] = 0;
 
-    //for each step i calculate tolls by using equation which adds the k previous step's tolls to current steps toll
+    //for each step i calculate tolls by using equation which adds the k previous steps' tolls to current step's toll
     for(let i=1; i<=n; i++){
         for(let j=1; j<=k; j++){
             if(i-j >= 0){
@@ -23,7 +23,7 @@ function climbStairs(n, k, toll){
         cache[i % k] = toll[i] + Math.min(...temp);
     }
 
-    //return least expensive route
+    //return toll for least expensive route
     return cache[n % k];
 }
 
