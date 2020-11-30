@@ -4,9 +4,9 @@
 function uniquePath(m, n){
 
 	//create multidimentional array of size (m x n)
-	let dp = [m];
+	let dp = new Array(m);
 	for(let i = 0; i < m; i++){
-			dp[i] = [n];
+		dp[i] = new Array(n);
 	}
 
 	//base case

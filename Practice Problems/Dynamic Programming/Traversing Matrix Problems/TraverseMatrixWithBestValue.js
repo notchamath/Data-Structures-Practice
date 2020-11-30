@@ -7,9 +7,9 @@ function uniquePath(grid){
 	let m = grid.length;
 	let n = grid[0].length;
 
-	let dp = [m];
+	let dp = new Array(m);
 	for(let i = 0; i < m; i++){
-			dp[i] = [n];
+		dp[i] = new Array(n);
 	}
 
 	//keep adding the profit from each of ways to get to the point you want to get to, choose the most profitable path 
